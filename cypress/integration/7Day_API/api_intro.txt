@@ -1,0 +1,34 @@
+******API*******
+
+//What is API => Application Programmming Interface
+
+//There are 3 layer of any software
+1. Client => Browser/FrontEnd
+2. Middle level layer => APL
+3. Database => BackEnd /Server
+
+//When we are using Api by postman then our client is postman
+//When we are using API by using cypress our clent is browser
+
+Example=>If there is make my trip app then it is connected with air india ,Train,Buses so all this train bus air india not given the full access of data to make my trip app they give limited access of data
+so airindia create one api,train create one api and bus created one api and they gives this to make my trip
+
+//API used json langauge to take request and send responce
+//There are 4 type of request
+1. GET =>Retrive data
+2. Post =>Create data
+3. Put =>Update the data
+4. Delete =>to delete data
+
+//API are nothing but the URL(https://reqres.in/api/users?page=2)
+This url having 3 parts 
+1. Base url =>https://reqres.in
+2. Resource =>/api/users
+3. Parameter => It having 2 types [1. (if slash)path parameter 2.  (if que mark) query parameter] =>?page=2
+
+//Request Body known as payload 
+{
+ Request body
+}
+
+//Dummay API practice website=> https://reqres.in/
