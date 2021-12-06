@@ -55,8 +55,8 @@ describe("Network requests", () => {
         cy.wait('@getRequest').should((obj) => {
             cy.log(obj)
             expect(obj.request.method).to.eql("GET")
-            expect(obj.request.headers['responceTimeout']).to.be.greaterThan(10000)
-            //expect(obj.request.headers['sec-fetch-dest']).should('eql', 'empty')
+            expect(obj.request['responseTimeout']).to.eq(30000)
+            expect(obj.request['headers']['sec-fetch-dest']).to.eql('empty')
         })
     })
 })

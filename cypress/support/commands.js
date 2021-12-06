@@ -23,3 +23,35 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+//===================================================================================
+//Find the sum age in table 
+Cypress.Commands.add('AgeCalculate', (id, expectValue) => {
+    let sum = 0
+    cy.get(`#${id}`).find('tr').each((el, index, list) => {
+        let age1 = el.children('td').last().text()
+        //cy.log(age1)
+        sum = sum + Number(age1)
+        //cy.log(sum)
+    }).then(() => {
+        expect(sum).to.eql(expectValue)
+    })
+})
+
+
+//=======================================================================================
+
+//Custom commad for the confirm popup)
+Cypress.Commands.add('confirmPopup', (locator, Nstr, flag, footer) => {
+    cy.get(locator).click()
+    cy.on('window:confirm', function (str) {
+        expect(str).to.eql(Nstr)
+        return flag
+    })
+    cy.get('#confirm-alert-text').should('have.text', footer)
+})
+//=========================================================================================
+
+
+import 'cypress-file-upload';

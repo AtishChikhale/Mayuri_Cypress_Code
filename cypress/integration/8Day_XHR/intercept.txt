@@ -1,0 +1,7 @@
+
+What is intercept=>
+As from frontend we send request and to get responce from database it take sometime so we write pgm which indicate after sending request we have to wait until responce come BackEnd
+it is the use of intercept
+
+What is XHR request=>
+Whenever fronend developer call the element on browser it known as XHR request
