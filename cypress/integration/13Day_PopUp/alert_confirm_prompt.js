@@ -11,24 +11,24 @@ describe('Verify prompt popup in cypress', () => {
             cy.get('#result').should('have.text', 'You entered: hello')
         })
     })
-    
+
     //for confirm
-    it('Verify the confirm popup in cypress',()=>{
+    it('Verify the confirm popup in cypress', () => {
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
-        cy.window().then((obj)=>{
-            cy.stub(obj,'confirm').returns(true)
+        cy.window().then((obj) => {
+            cy.stub(obj, 'confirm').returns(true)
             cy.get('button[onclick="jsConfirm()"]').click()
-            cy.get('#result').should('have.text','You clicked: Ok')
+            cy.get('#result').should('have.text', 'You clicked: Ok')
         })
     })
 
-     //for alert
-     it('Verify the confirm popup in cypress',()=>{
+    //for alert
+    it('Verify the confirm popup in cypress', () => {
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
-        cy.window().then((obj)=>{
-            cy.stub(obj,'alert').returns(true)
+        cy.window().then((obj) => {
+            cy.stub(obj, 'alert').returns(true)
             cy.get('button[onclick="jsAlert()"]').click()
-            cy.get('#result').should('have.text','You successfully clicked an alert')
+            cy.get('#result').should('have.text', 'You successfully clicked an alert')
         })
     })
 })

@@ -4,7 +4,7 @@
 
 //There are 3 layer of any software
 1. Client => Browser/FrontEnd
-2. Middle level layer => APL
+2. Middle level layer => API
 3. Database => BackEnd /Server
 
 //When we are using Api by postman then our client is postman
@@ -22,6 +22,8 @@ so airindia create one api,train create one api and bus created one api and they
 
 //API are nothing but the URL(https://reqres.in/api/users?page=2)
 This url having 3 parts 
+uri=uniform resourse identifier(all combination)
+url=uniform resourse locater
 1. Base url =>https://reqres.in
 2. Resource =>/api/users
 3. Parameter => It having 2 types [1. (if slash)path parameter 2.  (if que mark) query parameter] =>?page=2
@@ -32,3 +34,10 @@ This url having 3 parts
 }
 
 //Dummay API practice website=> https://reqres.in/
+
+
+XHR=>eXtensible Markup Language
+
+
+www.reddit.com/login
+www.reddit.com/createuser

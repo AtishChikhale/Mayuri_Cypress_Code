@@ -53,5 +53,49 @@ Cypress.Commands.add('confirmPopup', (locator, Nstr, flag, footer) => {
 })
 //=========================================================================================
 
+// Cypress.Commands.add('confirmPopup', (locator, Nstr, footer) => {
+//     cy.get(locator).click()
+//     cy.on('window:alert', function (str) {
+//         expect(str).to.eql(Nstr)
+//         return true
+//     })
+//     cy.get('#confirm-alert-text').should('have.text', footer)
+// })
 
 import 'cypress-file-upload';
+
+Cypress.Commands.add('GetAPIData', (method, url) => {
+    cy.request({
+        method: method,
+        url: url,
+        headers: {
+            Authorization: 'Bearer a2a099b15a66d1a9efc71ae1c63cda2bf5bcb4f6059fb16419946eb115f06f50'
+        }
+    })
+})
+
+//=================================================================================================
+
+//GorestApi-new_23_utility
+
+Cypress.Commands.add('apiRequest', (method, url, body) => {
+    if (body) {
+        cy.request({
+            method: method,
+            url: url,
+            headers: {
+                Authorization: "Bearer a2a099b15a66d1a9efc71ae1c63cda2bf5bcb4f6059fb16419946eb115f06f50"
+            },
+            body: body
+        })
+    } else {
+        cy.request({
+            method: method,
+            url: url,
+            headers: {
+                Authorization: "Bearer a2a099b15a66d1a9efc71ae1c63cda2bf5bcb4f6059fb16419946eb115f06f50"
+            }
+        })
+    }
+
+})

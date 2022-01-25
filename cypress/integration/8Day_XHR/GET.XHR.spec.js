@@ -4,7 +4,6 @@ describe("Network requests", () => {
     beforeEach(() => {
         cy.visit('https://example.cypress.io/commands/network-requests')
     })
-
     // Here we can Validate =>
     // REQUEST=> The Request body,Request header
     // RESPONCE=> Responce body,Responce header,Responce status,Responce duration
@@ -17,7 +16,6 @@ describe("Network requests", () => {
             url: "https://jsonplaceholder.cypress.io/comments/1"
         }).as("getRequest")
 
-
         cy.contains('Get Comment').click()
         cy.wait('@getRequest').its('response.statusCode').should('eql', 200)
 
@@ -29,7 +27,6 @@ describe("Network requests", () => {
             method: "GET",
             url: "https://jsonplaceholder.cypress.io/comments/1"
         }).as("getBody")
-
 
         cy.contains('Get Comment').click()
         cy.wait('@getBody').should((obj) => {
@@ -49,7 +46,6 @@ describe("Network requests", () => {
             method: "GET",
             url: "https://jsonplaceholder.cypress.io/comments/1"
         }).as('getRequest')
-
 
         cy.contains('Get Comment').click()
         cy.wait('@getRequest').should((obj) => {

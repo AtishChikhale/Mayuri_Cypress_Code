@@ -1,3 +1,5 @@
+
+
 // describe("traverse method on flipkart", () => {
 //     it('search block', () => {
 //         cy.visit('https://www.flipkart.com/')
@@ -43,13 +45,11 @@
 
 // })
 
-
-
-describe("Mobile on filpkart",()=>{
-    it('Mobile above 10000',()=>{
+describe("Mobile on filpkart", () => {
+    it('Mobile above 10000', () => {
         cy.visit('https://www.flipkart.com/')
         cy.get('input[autocomplete="off"]').type("Mobile")
         cy.get('.L0Z3Pu').click()
-        cy.get('_2YxCDZ').children("option").eq(3).should('have.text','₹10000')
+        cy.get('_2YxCDZ').children("option").eq(3).should('have.text', '₹10000')
     })
 })

@@ -1,0 +1,22 @@
+{
+    "firstName": "Mayuri",
+    "lastName": "Katwe",
+    "moNumber": "7745045298",
+    "country": "india",
+    "city": "nashik",
+    "email_Address": "mayuri@gmail.com",
+    "gender": [
+        "Male",
+        "Female"
+    ],
+    "day": [
+        "Sunday",
+        "Monday",
+        "Saturday"
+    ],
+    "time": [
+        "Morning",
+        "Afternoon",
+        "Evening"
+    ]
+}

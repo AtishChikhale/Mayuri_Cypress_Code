@@ -6,7 +6,7 @@ describe('Validate te dynamic dropdown',()=>{
         cy.get('#autocomplete').type('ind')
         cy.get('#ui-id-1').find('li').each((el)=>{
             if(el.text()=="India"){
-                el.click()
+                cy.wrap(el).click()
             }
         }).then(()=>{
             cy.get('#autocomplete').should('have.value','India')
